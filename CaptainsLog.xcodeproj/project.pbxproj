@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C7917A9F2F1CDCE600FD12F1 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = C7917A9E2F1CDCE600FD12F1 /* Dependencies */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		C73835D82DA18E5C00D1B9E4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7917A9F2F1CDCE600FD12F1 /* Dependencies in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = CaptainsLog;
 			packageProductDependencies = (
+				C7917A9E2F1CDCE600FD12F1 /* Dependencies */,
 			);
 			productName = CaptainsLog;
 			productReference = C73835CA2DA18E5A00D1B9E4 /* CaptainsLog.app */;
@@ -195,6 +201,9 @@
 			);
 			mainGroup = C73835C12DA18E5A00D1B9E4;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				C7917A9D2F1CDCE600FD12F1 /* XCRemoteSwiftPackageReference "swift-dependencies" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C73835CB2DA18E5A00D1B9E4 /* Products */;
 			projectDirPath = "";
@@ -558,6 +567,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C7917A9D2F1CDCE600FD12F1 /* XCRemoteSwiftPackageReference "swift-dependencies" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-dependencies";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.10.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C7917A9E2F1CDCE600FD12F1 /* Dependencies */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7917A9D2F1CDCE600FD12F1 /* XCRemoteSwiftPackageReference "swift-dependencies" */;
+			productName = Dependencies;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C73835C22DA18E5A00D1B9E4 /* Project object */;
 }

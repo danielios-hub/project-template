@@ -7,15 +7,29 @@
 
 import SwiftUI
 
+@Observable
+final class MoreViewModel {
+    var router: AppTabRouter
+    
+    init(router: AppTabRouter) {
+        self.router = router
+    }
+    
+    func goToNewNote() {
+        router.goToNewNote()
+    }
+}
+
 struct MoreView: View {
-    @Bindable var router: AppTabRouter = AppTabRouter()
+    @State var viewModel = MoreViewModel(router: AppTabRouter())
+    @Environment(\.modelContext) private var modelContext
     
     var body: some View {
-        NavigationStack(path: $router.path) {
+        NavigationStack(path: $viewModel.router.path) {
             VStack {
                 Spacer()
                 Button(action: {
-                    router.goToNewNote()
+                    viewModel.goToNewNote()
                 }, label: {
                     Text("New Note")
                 })
@@ -23,7 +37,7 @@ struct MoreView: View {
                 Spacer()
             }
             .navigationDestination(for: AppTabRouter.JournalRoute.self, destination: { route in
-                router.buildView(route: route)
+                viewModel.router.buildView(route: route)
             })
         }
     }
