@@ -5,11 +5,11 @@ import Dependencies
 @Observable
 final class NoteEditViewModel {
     var note: JournalNote
-    private var router: AppTabRouter
+    private var router: JournalRouting
     @ObservationIgnored
     @Dependency(\.getNotesUseCase) var getNotes
     
-    init(note: JournalNote, router: AppTabRouter) {
+    init(note: JournalNote, router: JournalRouting) {
         self.note = note
         self.router = router
     }
@@ -26,7 +26,7 @@ struct NoteEditView: View {
     
     init(
         note: JournalNote,
-        router: AppTabRouter
+        router: JournalRouting
     ) {
         _viewModel = .init(
             wrappedValue: NoteEditViewModel(

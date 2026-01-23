@@ -11,14 +11,14 @@ import Dependencies
 
 @Observable
 final class JournalViewModel {
-    var router: AppTabRouter
+    var router: JournalRouting
     //var notes: [JournalNote] = []
     var newNoteTitle: String = ""
     var newNoteDescription: String = ""
     @ObservationIgnored
     @Dependency(\.getNotesUseCase) var getNotes
     
-    init(router: AppTabRouter) {
+    init(router: JournalRouting) {
         self.router = router
     }
     
@@ -42,32 +42,39 @@ final class JournalViewModel {
     }
 }
 
+struct JournalCoordinator: View {
+    @State var router = AppTabRouter()
+    
+    var body: some View {
+        NavigationStack(path: $router.path) {
+            JournalView(viewModel: JournalViewModel(router: router))
+                .navigationDestination(for: AppTabRouter.JournalRoute.self) { route in
+                    router.buildView(route: route)
+                }
+        }
+    }
+}
+
 struct JournalView: View {
-    @State var viewModel = JournalViewModel(router: AppTabRouter())
+    @State var viewModel: JournalViewModel
     @Query var notes: [JournalNote]
     
     var body: some View {
-        NavigationStack(path: $viewModel.router.path) {
-            VStack {
-                AddTodayMoodView(
-                    noteTitle: $viewModel.newNoteTitle,
-                    onAddNote: {
-                        viewModel.addNote()
-                    }
-                )
-                    .padding()
-                
-                NoteList(
-                    notes: notes,
-                    onNoteTapped: {
-                        viewModel.goToEditNote(note: $0)
-                    }
-                )
-            }
-            .navigationDestination(for: AppTabRouter.JournalRoute.self, destination: { route in
-                viewModel.router.buildView(route: route)
-            })
+        VStack {
+            AddTodayMoodView(
+                noteTitle: $viewModel.newNoteTitle,
+                onAddNote: {
+                    viewModel.addNote()
+                }
+            )
+            .padding()
+            
+            NoteList(
+                notes: notes,
+                onNoteTapped: {
+                    viewModel.goToEditNote(note: $0)
+                }
+            )
         }
-        
     }
 }

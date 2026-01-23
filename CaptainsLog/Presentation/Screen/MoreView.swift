@@ -9,9 +9,9 @@ import SwiftUI
 
 @Observable
 final class MoreViewModel {
-    var router: AppTabRouter
+    var router: JournalRouting
     
-    init(router: AppTabRouter) {
+    init(router: JournalRouting) {
         self.router = router
     }
     
@@ -20,25 +20,32 @@ final class MoreViewModel {
     }
 }
 
-struct MoreView: View {
-    @State var viewModel = MoreViewModel(router: AppTabRouter())
-    @Environment(\.modelContext) private var modelContext
+struct MoreCoordinator: View {
+    @State var router = MoreTabRouter()
     
     var body: some View {
-        NavigationStack(path: $viewModel.router.path) {
-            VStack {
-                Spacer()
-                Button(action: {
-                    viewModel.goToNewNote()
-                }, label: {
-                    Text("New Note")
-                })
-                
-                Spacer()
-            }
-            .navigationDestination(for: AppTabRouter.JournalRoute.self, destination: { route in
-                viewModel.router.buildView(route: route)
+        NavigationStack(path: $router.path) {
+            MoreView(viewModel: MoreViewModel(router: router))
+                .navigationDestination(for: MoreTabRouter.MoreRoute.self) { route in
+                    router.buildView(route: route)
+                }
+        }
+    }
+}
+
+struct MoreView: View {
+    @State var viewModel: MoreViewModel
+    
+    var body: some View {
+        VStack {
+            Spacer()
+            Button(action: {
+                viewModel.goToNewNote()
+            }, label: {
+                Text("New Note")
             })
+            
+            Spacer()
         }
     }
 }

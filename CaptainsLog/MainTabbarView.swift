@@ -34,7 +34,7 @@ struct MainTabbarView: View {
     var body: some View {
         VStack(spacing: 0) {
             TabView(selection: $viewModel.selectedTab) {
-                JournalView()
+                JournalCoordinator()
                     .tabItem {
                         Label(
                             Tab.journal.title,
@@ -44,7 +44,7 @@ struct MainTabbarView: View {
                     .tag(Tab.journal)
                 
 
-                MoreView()
+                MoreCoordinator()
                     .tabItem {
                         Label(
                             Tab.more.title,

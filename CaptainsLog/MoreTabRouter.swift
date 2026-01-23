@@ -1,23 +1,21 @@
 //
-//  AppTabRouter.swift
+//  MoreTabRouter.swift
 //  CaptainsLog
 //
-//  Created by Daniel Gallego Peralta on 17/1/26.
+//  Created by Daniel Gallego Peralta on 25/1/26.
 //
 
-import Foundation
 import SwiftUI
 
 @Observable
-class AppTabRouter: JournalRouting, NoteViewBuilding {
-    
+class MoreTabRouter: JournalRouting, NoteViewBuilding {
     public init(path: NavigationPath = NavigationPath()) {
         self.path = path
     }
     
-    enum JournalRoute: Hashable {
-        case editNote(JournalNote)
+    enum MoreRoute: Hashable {
         case newNote(JournalNote)
+        case editNote(JournalNote)
     }
     
     var path = NavigationPath()
@@ -26,21 +24,22 @@ class AppTabRouter: JournalRouting, NoteViewBuilding {
         path.removeLast()
     }
     
-    func goToEditNote(note: JournalNote) {
-        path.append(JournalRoute.editNote(note))
-    }
-    
     func goToNewNote() {
         let note = JournalNote(title: "New Note", descriptionNote: "empty", mood: .high)
-        path.append(JournalRoute.newNote(note))
+        path.append(MoreRoute.newNote(note))
     }
     
-    func buildView(route: JournalRoute) -> some View {
+    func goToEditNote(note: JournalNote) {
+        path.append(MoreRoute.editNote(note))
+    }
+    
+    @ViewBuilder
+    func buildView(route: MoreRoute) -> some View {
         switch route {
+        case .newNote(let note):
+            makeNoteEditView(note: note, router: self)
         case .editNote(let note):
             makeNoteEditView(note: note, router: self)
-        case .newNote(let newNote):
-            makeNoteEditView(note: newNote, router: self)
         }
     }
 }

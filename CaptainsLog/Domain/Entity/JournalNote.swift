@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-class JournalNote {
+public class JournalNote {
     //@Attribute(.unique) var emailAddress: String
     var title: String
     var descriptionNote: String
