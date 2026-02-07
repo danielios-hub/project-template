@@ -9,7 +9,7 @@ final class JournalViewModel {
     var newNoteTitle: String = ""
     var newNoteDescription: String = ""
     @ObservationIgnored
-    @Dependency(\.getNotesUseCase) var getNotes
+    @Dependency(\.saveNoteUseCase) var saveNoteUseCase
     
     init(router: AppRouting) {
         self.router = router
@@ -23,7 +23,7 @@ final class JournalViewModel {
             mood: .high
         )
         
-        getNotes.saveNote(note)
+        saveNoteUseCase.invoke(note)
         
         newNoteTitle = ""
         newNoteDescription = ""

@@ -9,24 +9,13 @@ import SwiftData
 import Dependencies
 
 public struct GetNotesUseCase {
-    @Dependency(\.dataContainer) var dataContainer: SwiftDataContainer
+    @Dependency(\.notesRepository) var notesRepository: NotesRepository
     
     public init() {}
     
     @MainActor
     public func invoke() async throws -> [JournalNote] {
-        let descriptor = FetchDescriptor<JournalNote>()
-        return try dataContainer.container.mainContext.fetch(descriptor)
-    }
-    
-    @MainActor
-    public func saveNote(_ note: JournalNote) {
-        dataContainer.container.mainContext.insert(note)
-    }
-    
-    @MainActor
-    public func deleteNote(_ note: JournalNote) {
-        dataContainer.container.mainContext.delete(note)
+        try await notesRepository.getNotes()
     }
 }
 
