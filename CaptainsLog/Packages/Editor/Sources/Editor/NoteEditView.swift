@@ -1,6 +1,6 @@
 import Core
 import SwiftUI
-import Core
+
 import Dependencies
 
 @Observable
