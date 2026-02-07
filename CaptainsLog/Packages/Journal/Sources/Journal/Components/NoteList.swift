@@ -1,10 +1,3 @@
-//
-//  NoteList.swift
-//  CaptainsLog
-//
-//  Created by Daniel Gallego Peralta on 17/1/26.
-//
-
 import SwiftUI
 import Core
 

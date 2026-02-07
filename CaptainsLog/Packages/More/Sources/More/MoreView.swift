@@ -1,10 +1,3 @@
-//
-//  MoreView.swift
-//  CaptainsLog
-//
-//  Created by Daniel Gallego Peralta on 5/9/25.
-//
-
 import SwiftUI
 
 import Core

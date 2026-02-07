@@ -1,9 +1,3 @@
-//
-//  SwiftDataContainer.swift
-//  CaptainsLog
-//
-//  Created by Daniel Gallego Peralta on 18/1/26.
-//
 import Foundation
 import SwiftData
 import Dependencies

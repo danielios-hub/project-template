@@ -1,10 +1,3 @@
-//
-//  GetNotesUseCase.swift
-//  CaptainsLog
-//
-//  Created by Daniel Gallego Peralta on 13/4/25.
-//
-
 import SwiftData
 import Dependencies
 

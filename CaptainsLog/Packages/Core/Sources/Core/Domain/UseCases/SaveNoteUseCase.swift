@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  Core
-//
-//  Created by Daniel Gallego Peralta on 7/2/26.
-//
-
 import Foundation
 import Dependencies
 

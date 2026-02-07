@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  More
-//
-//  Created by Daniel Gallego Peralta on 7/2/26.
-//
-
 import SwiftUI
 import Core
 

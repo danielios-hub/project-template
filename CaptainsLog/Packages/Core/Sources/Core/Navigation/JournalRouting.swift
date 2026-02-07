@@ -1,10 +1,3 @@
-//
-//  JournalRouting.swift
-//  CaptainsLog
-//
-//  Created by Daniel Gallego Peralta on 25/1/26.
-//
-
 import SwiftUI
 
 public enum JournalRoute: Hashable {
