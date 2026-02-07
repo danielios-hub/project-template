@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7378CD52F3770F400B4550A /* News in Frameworks */ = {isa = PBXBuildFile; productRef = C7378CD42F3770F400B4550A /* News */; };
+		C77FCE072F2444E4004F2519 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = C77FCE062F2444E4004F2519 /* Core */; };
+		C77FCE092F2444E4004F2519 /* Editor in Frameworks */ = {isa = PBXBuildFile; productRef = C77FCE082F2444E4004F2519 /* Editor */; };
+		C77FCE0B2F2444E4004F2519 /* Journal in Frameworks */ = {isa = PBXBuildFile; productRef = C77FCE0A2F2444E4004F2519 /* Journal */; };
+		C77FCE0D2F2444E4004F2519 /* More in Frameworks */ = {isa = PBXBuildFile; productRef = C77FCE0C2F2444E4004F2519 /* More */; };
 		C7917A9F2F1CDCE600FD12F1 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = C7917A9E2F1CDCE600FD12F1 /* Dependencies */; };
 /* End PBXBuildFile section */
 
@@ -56,7 +61,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C77FCE092F2444E4004F2519 /* Editor in Frameworks */,
 				C7917A9F2F1CDCE600FD12F1 /* Dependencies in Frameworks */,
+				C77FCE0B2F2444E4004F2519 /* Journal in Frameworks */,
+				C77FCE0D2F2444E4004F2519 /* More in Frameworks */,
+				C77FCE072F2444E4004F2519 /* Core in Frameworks */,
+				C7378CD52F3770F400B4550A /* News in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +93,7 @@
 				C73835CC2DA18E5A00D1B9E4 /* CaptainsLog */,
 				C73835DA2DA18E5C00D1B9E4 /* CaptainsLogTests */,
 				C73835E42DA18E5C00D1B9E4 /* CaptainsLogUITests */,
+				C77FCE052F2444E4004F2519 /* Frameworks */,
 				C73835CB2DA18E5A00D1B9E4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,6 +106,13 @@
 				C73835E12DA18E5C00D1B9E4 /* CaptainsLogUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C77FCE052F2444E4004F2519 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,6 +136,11 @@
 			name = CaptainsLog;
 			packageProductDependencies = (
 				C7917A9E2F1CDCE600FD12F1 /* Dependencies */,
+				C77FCE062F2444E4004F2519 /* Core */,
+				C77FCE082F2444E4004F2519 /* Editor */,
+				C77FCE0A2F2444E4004F2519 /* Journal */,
+				C77FCE0C2F2444E4004F2519 /* More */,
+				C7378CD42F3770F400B4550A /* News */,
 			);
 			productName = CaptainsLog;
 			productReference = C73835CA2DA18E5A00D1B9E4 /* CaptainsLog.app */;
@@ -580,6 +603,26 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C7378CD42F3770F400B4550A /* News */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = News;
+		};
+		C77FCE062F2444E4004F2519 /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
+		};
+		C77FCE082F2444E4004F2519 /* Editor */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Editor;
+		};
+		C77FCE0A2F2444E4004F2519 /* Journal */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Journal;
+		};
+		C77FCE0C2F2444E4004F2519 /* More */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = More;
+		};
 		C7917A9E2F1CDCE600FD12F1 /* Dependencies */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C7917A9D2F1CDCE600FD12F1 /* XCRemoteSwiftPackageReference "swift-dependencies" */;
