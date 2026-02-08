@@ -38,6 +38,8 @@ playground.xcworkspace
 # Add this line if you want to avoid checking in checkouts
 .swiftpm/xcode
 .build/
+# Ignore Package.resolved for local packages, but keep it for the main project
+**/Packages/**/*.resolved
 
 # CocoaPods
 #
