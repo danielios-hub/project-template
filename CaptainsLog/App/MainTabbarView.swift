@@ -70,7 +70,6 @@ struct MainTabbarView: View {
                         )
                     }
                     .tag(Tab.news)
-                
 
                 MoreCoordinator(router: appContainer.makeRouter())
                     .tabItem {

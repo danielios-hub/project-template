@@ -6,8 +6,19 @@ final class NewsListViewModel {
     var router: AppRouting
     
     let articles = [
-        NewsArticle(title: "Captain's Log v2.0 Released", summary: "Major update with improved navigation.", content: "We are excited to announce the release of Captain's Log v2.0. This update brings a completely new navigation architecture based on modules..."),
-        NewsArticle(title: "Tips for Better Journaling", summary: "How to make the most out of your daily logs.", content: "Journaling is a powerful tool for self-reflection. Here are some tips to help you get started...")
+        NewsArticle(
+            title: "Captain's Log v2.0 Released",
+            summary: "Major update with improved navigation.",
+            content: """
+                We are excited to announce the release of Captain's Log v2.0. This update brings \
+                a completely new navigation architecture based on modules...
+                """
+        ),
+        NewsArticle(
+            title: "Tips for Better Journaling",
+            summary: "How to make the most out of your daily logs.",
+            content: "Journaling is a powerful tool for self-reflection. Here are some tips to help you get started..."
+        )
     ]
     
     public init(router: AppRouting) {

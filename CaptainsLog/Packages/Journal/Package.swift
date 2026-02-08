@@ -9,13 +9,13 @@ let package = Package(
     products: [
         .library(
             name: "Journal",
-            targets: ["Journal"]),
+            targets: ["Journal"])
     ],
     dependencies: [
         .package(path: "../Core"),
         .package(path: "../Editor"),
         .package(path: "../News"),
-        .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.0.0"),
+        .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.0.0")
     ],
     targets: [
         .target(
@@ -26,6 +26,6 @@ let package = Package(
                 "News",
                 .product(name: "Dependencies", package: "swift-dependencies")
             ]
-        ),
+        )
     ]
 )

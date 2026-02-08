@@ -1,0 +1,36 @@
+disabled_rules:
+  - trailing_whitespace
+  - cyclomatic_complexity
+
+opt_in_rules:
+  - empty_count
+  - empty_string
+  - discouraged_optional_boolean
+  - force_unwrapping
+
+included:
+  - CaptainsLog
+  - Packages
+
+excluded:
+  - "**/Resources/**"
+  - "**/Generated/**"
+  - "**/Package.resolved"
+  - "**/Packages/**/.build/**"
+  - "**/Packages/**/.swiftpm/**"
+  - .build
+  - .swiftpm
+
+custom_rules:
+  no_file_headers:
+    name: "No File Headers"
+    regex: '(?i)^\/\/.*Created by.*$'
+    message: "Default Xcode file headers are not allowed as per rules.md."
+    severity: error
+
+line_length: 120
+file_length: 500
+type_body_length: 300
+function_body_length: 50
+
+reporter: "xcode" # Standard for Xcode integration

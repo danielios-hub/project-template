@@ -18,7 +18,7 @@ struct AddTodayMoodView: View {
             VStack(spacing: 8) {
                 Button(action: {
                     
-                }) {
+                }, label: {
                     ZStack {
                         Circle()
                             .stroke(Color.gray, lineWidth: 1)
@@ -28,13 +28,12 @@ struct AddTodayMoodView: View {
                             .padding(.all, 8)
                     }
                     .frame(width: 60, height: 60)
-                }
+                })
                 
                 Button("Add") {
                     onAddNote()
                 }
             }
-            
             
         }
     }

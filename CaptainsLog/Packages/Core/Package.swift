@@ -9,10 +9,10 @@ let package = Package(
     products: [
         .library(
             name: "Core",
-            targets: ["Core"]),
+            targets: ["Core"])
     ],
     dependencies: [
-        .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.0.0"),
+        .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.0.0")
     ],
     targets: [
         .target(
@@ -20,6 +20,6 @@ let package = Package(
             dependencies: [
                 .product(name: "Dependencies", package: "swift-dependencies")
             ]
-        ),
+        )
     ]
 )
