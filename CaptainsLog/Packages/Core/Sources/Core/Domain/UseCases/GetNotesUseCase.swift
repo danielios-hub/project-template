@@ -1,5 +1,5 @@
 import SwiftData
-import Dependencies
+@preconcurrency import Dependencies
 
 public struct GetNotesUseCase {
     @Dependency(\.notesRepository) var notesRepository: NotesRepository

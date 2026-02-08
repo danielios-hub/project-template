@@ -1,8 +1,8 @@
 import Foundation
 import SwiftData
-import Dependencies
+@preconcurrency import Dependencies
 
-public struct SwiftDataContainer {
+public struct SwiftDataContainer: Sendable {
     public let container: ModelContainer
     
     public init() {

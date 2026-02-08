@@ -5,16 +5,19 @@ public enum AppRoute: Hashable {
     case news(NewsRoute)
 }
 
-public protocol AppRouting {
+@MainActor
+public protocol AppRouting: Sendable {
     func navigateTo(journalRoute: JournalRoute)
     func navigateTo(newsRoute: NewsRoute)
     func pop()
 }
 
-public protocol ViewBuilding {
+@MainActor
+public protocol ViewBuilding: Sendable {
     func buildView(for route: AppRoute, router: AppRouter) -> AnyView
 }
 
+@MainActor
 @Observable
 public class AppRouter: AppRouting {
     public var path = NavigationPath()

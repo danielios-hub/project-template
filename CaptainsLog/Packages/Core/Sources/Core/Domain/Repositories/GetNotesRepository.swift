@@ -1,43 +1,40 @@
 import SwiftData
-import Dependencies
+@preconcurrency import Dependencies
 
-public protocol NotesRepository {
+public protocol NotesRepository: Sendable {
     @MainActor
     func getNotes() async throws -> [JournalNote]
     
     @MainActor
-    func saveNote(_ note: JournalNote)
+    func saveNote(_ note: JournalNote) async
     
     @MainActor
-    func deleteNote(_ note: JournalNote)
+    func deleteNote(_ note: JournalNote) async
 }
 
-public struct NotesRepositoryImpl: NotesRepository {
+public struct NotesRepositoryImpl: NotesRepository, Sendable {
     @Dependency(\.dataContainer) var dataContainer: SwiftDataContainer
     
-    @MainActor
     public func getNotes() async throws -> [JournalNote] {
         let descriptor = FetchDescriptor<JournalNote>()
         return try dataContainer.container.mainContext.fetch(descriptor)
     }
     
-    @MainActor
-    public func saveNote(_ note: JournalNote) {
+    public func saveNote(_ note: JournalNote) async {
         dataContainer.container.mainContext.insert(note)
     }
     
-    @MainActor
-    public func deleteNote(_ note: JournalNote) {
+    public func deleteNote(_ note: JournalNote) async {
         dataContainer.container.mainContext.delete(note)
     }
 }
 
 enum NotesRepositoryKey: DependencyKey {
-    public static let liveValue: NotesRepository = NotesRepositoryImpl()
+    public static let liveValue: any NotesRepository = NotesRepositoryImpl()
 }
 
 public extension DependencyValues {
-  var notesRepository: NotesRepository {
+  var notesRepository: any NotesRepository {
     get { self[NotesRepositoryKey.self] }
     set { self[NotesRepositoryKey.self] = newValue }
   }

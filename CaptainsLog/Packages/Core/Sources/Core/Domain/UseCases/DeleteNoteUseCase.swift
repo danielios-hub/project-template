@@ -1,5 +1,5 @@
 import Foundation
-import Dependencies
+@preconcurrency import Dependencies
 
 public struct DeleteNoteUseCase {
     @Dependency(\.notesRepository) var notesRepository: NotesRepository
@@ -7,8 +7,8 @@ public struct DeleteNoteUseCase {
     public init() {}
     
     @MainActor
-    public func invoke(_ note: JournalNote) {
-        notesRepository.deleteNote(note)
+    public func invoke(_ note: JournalNote) async {
+        await notesRepository.deleteNote(note)
     }
 }
 

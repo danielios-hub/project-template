@@ -1,5 +1,5 @@
 import Foundation
-import Dependencies
+@preconcurrency import Dependencies
 
 public struct SaveNoteUseCase {
     @Dependency(\.notesRepository) var notesRepository: NotesRepository
@@ -7,8 +7,8 @@ public struct SaveNoteUseCase {
     public init() {}
 
     @MainActor
-    public func invoke(_ note: JournalNote) {
-        notesRepository.saveNote(note)
+    public func invoke(_ note: JournalNote) async {
+        await notesRepository.saveNote(note)
     }
 }
 

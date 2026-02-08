@@ -15,7 +15,6 @@ final class JournalViewModel {
         self.router = router
     }
     
-    @MainActor
     func addNote() {
         let note = JournalNote(
             title: newNoteTitle,
@@ -23,11 +22,13 @@ final class JournalViewModel {
             mood: .high
         )
         
-        saveNoteUseCase.invoke(note)
-        
-        newNoteTitle = ""
-        newNoteDescription = ""
-        router.navigateTo(journalRoute: .newNote(note))
+        Task {
+            await saveNoteUseCase.invoke(note)
+            
+            newNoteTitle = ""
+            newNoteDescription = ""
+            router.navigateTo(journalRoute: .newNote(note))
+        }
     }
     
     func goToEditNote(note: JournalNote) {

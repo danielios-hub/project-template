@@ -14,9 +14,10 @@ public final class NoteEditViewModel {
         self.router = router
     }
     
-    @MainActor
     public func delete() {
-        deleteNoteUseCase.invoke(note)
-        router.pop()
+        Task {
+            await deleteNoteUseCase.invoke(note)
+            router.pop()
+        }
     }
 }
