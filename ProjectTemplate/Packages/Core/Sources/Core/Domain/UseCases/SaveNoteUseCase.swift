@@ -1,7 +1,7 @@
 import Foundation
 @preconcurrency import Dependencies
 
-public struct SaveNoteUseCase {
+public struct SaveNoteUseCase: Sendable {
     @Dependency(\.notesRepository) var notesRepository: NotesRepository
     
     public init() {}

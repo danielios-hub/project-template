@@ -9,7 +9,7 @@ opt_in_rules:
   - force_unwrapping
 
 included:
-  - CaptainsLog
+  - ProjectTemplate
   - Packages
 
 excluded:

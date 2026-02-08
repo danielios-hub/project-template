@@ -4,7 +4,7 @@ import Dependencies
 import Core
 
 @main
-struct CaptainsLogApp: App {
+struct ProjectTemplateApp: App {
     @Dependency(\.dataContainer) var dataContainer: SwiftDataContainer
     
     init() {}

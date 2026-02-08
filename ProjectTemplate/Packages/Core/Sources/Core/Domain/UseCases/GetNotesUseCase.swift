@@ -1,7 +1,7 @@
 import SwiftData
 @preconcurrency import Dependencies
 
-public struct GetNotesUseCase {
+public struct GetNotesUseCase: Sendable {
     @Dependency(\.notesRepository) var notesRepository: NotesRepository
     
     public init() {}

@@ -1,7 +1,7 @@
 # Project Rules: Captain's Log
 
 ## Architecture
-- **Modular Design**: The project is split into local Swift Packages under `CaptainsLog/Packages/`.
+- **Modular Design**: The project is split into local Swift Packages under `ProjectTemplate/Packages/`.
   - `Core`: Shared models, navigation logic, and dependencies.
   - `Journal`, `News`, `More`, `Editor`: Feature modules.
 - **Navigation (MVVM-C / Router)**:
@@ -31,6 +31,6 @@
 
 ## Git & Filesystem
 - **SPM Resolving**: 
-  - Track `CaptainsLog.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved`.
+  - Track `ProjectTemplate.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved`.
   - Ignore local package versions via `.gitignore` rule: `**/Packages/**/*.resolved`.
 - **Naming**: Use descriptive names reflecting the module and purpose (e.g., `JournalViewModel`, `NewsCoordinator`).
