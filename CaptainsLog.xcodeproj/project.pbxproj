@@ -14,43 +14,14 @@
 		C7917A9F2F1CDCE600FD12F1 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = C7917A9E2F1CDCE600FD12F1 /* Dependencies */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		C73835D82DA18E5C00D1B9E4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C73835C22DA18E5A00D1B9E4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C73835C92DA18E5A00D1B9E4;
-			remoteInfo = CaptainsLog;
-		};
-		C73835E22DA18E5C00D1B9E4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C73835C22DA18E5A00D1B9E4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C73835C92DA18E5A00D1B9E4;
-			remoteInfo = CaptainsLog;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		C73835CA2DA18E5A00D1B9E4 /* CaptainsLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaptainsLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C73835D72DA18E5C00D1B9E4 /* CaptainsLogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaptainsLogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C73835E12DA18E5C00D1B9E4 /* CaptainsLogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaptainsLogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		C73835CC2DA18E5A00D1B9E4 /* CaptainsLog */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = CaptainsLog;
-			sourceTree = "<group>";
-		};
-		C73835DA2DA18E5C00D1B9E4 /* CaptainsLogTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CaptainsLogTests;
-			sourceTree = "<group>";
-		};
-		C73835E42DA18E5C00D1B9E4 /* CaptainsLogUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CaptainsLogUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -68,20 +39,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C73835D42DA18E5C00D1B9E4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C73835DE2DA18E5C00D1B9E4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -89,8 +46,6 @@
 			isa = PBXGroup;
 			children = (
 				C73835CC2DA18E5A00D1B9E4 /* CaptainsLog */,
-				C73835DA2DA18E5C00D1B9E4 /* CaptainsLogTests */,
-				C73835E42DA18E5C00D1B9E4 /* CaptainsLogUITests */,
 				C77FCE052F2444E4004F2519 /* Frameworks */,
 				C73835CB2DA18E5A00D1B9E4 /* Products */,
 			);
@@ -100,8 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				C73835CA2DA18E5A00D1B9E4 /* CaptainsLog.app */,
-				C73835D72DA18E5C00D1B9E4 /* CaptainsLogTests.xctest */,
-				C73835E12DA18E5C00D1B9E4 /* CaptainsLogUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,52 +97,6 @@
 			productReference = C73835CA2DA18E5A00D1B9E4 /* CaptainsLog.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C73835D62DA18E5C00D1B9E4 /* CaptainsLogTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C73835EE2DA18E5C00D1B9E4 /* Build configuration list for PBXNativeTarget "CaptainsLogTests" */;
-			buildPhases = (
-				C73835D32DA18E5C00D1B9E4 /* Sources */,
-				C73835D42DA18E5C00D1B9E4 /* Frameworks */,
-				C73835D52DA18E5C00D1B9E4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C73835D92DA18E5C00D1B9E4 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				C73835DA2DA18E5C00D1B9E4 /* CaptainsLogTests */,
-			);
-			name = CaptainsLogTests;
-			packageProductDependencies = (
-			);
-			productName = CaptainsLogTests;
-			productReference = C73835D72DA18E5C00D1B9E4 /* CaptainsLogTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		C73835E02DA18E5C00D1B9E4 /* CaptainsLogUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C73835F12DA18E5C00D1B9E4 /* Build configuration list for PBXNativeTarget "CaptainsLogUITests" */;
-			buildPhases = (
-				C73835DD2DA18E5C00D1B9E4 /* Sources */,
-				C73835DE2DA18E5C00D1B9E4 /* Frameworks */,
-				C73835DF2DA18E5C00D1B9E4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C73835E32DA18E5C00D1B9E4 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				C73835E42DA18E5C00D1B9E4 /* CaptainsLogUITests */,
-			);
-			name = CaptainsLogUITests;
-			packageProductDependencies = (
-			);
-			productName = CaptainsLogUITests;
-			productReference = C73835E12DA18E5C00D1B9E4 /* CaptainsLogUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -202,14 +109,6 @@
 				TargetAttributes = {
 					C73835C92DA18E5A00D1B9E4 = {
 						CreatedOnToolsVersion = 16.3;
-					};
-					C73835D62DA18E5C00D1B9E4 = {
-						CreatedOnToolsVersion = 16.3;
-						TestTargetID = C73835C92DA18E5A00D1B9E4;
-					};
-					C73835E02DA18E5C00D1B9E4 = {
-						CreatedOnToolsVersion = 16.3;
-						TestTargetID = C73835C92DA18E5A00D1B9E4;
 					};
 				};
 			};
@@ -235,28 +134,12 @@
 			projectRoot = "";
 			targets = (
 				C73835C92DA18E5A00D1B9E4 /* CaptainsLog */,
-				C73835D62DA18E5C00D1B9E4 /* CaptainsLogTests */,
-				C73835E02DA18E5C00D1B9E4 /* CaptainsLogUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C73835C82DA18E5A00D1B9E4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C73835D52DA18E5C00D1B9E4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C73835DF2DA18E5C00D1B9E4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -294,34 +177,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C73835D32DA18E5C00D1B9E4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C73835DD2DA18E5C00D1B9E4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C73835D92DA18E5C00D1B9E4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C73835C92DA18E5A00D1B9E4 /* CaptainsLog */;
-			targetProxy = C73835D82DA18E5C00D1B9E4 /* PBXContainerItemProxy */;
-		};
-		C73835E32DA18E5C00D1B9E4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C73835C92DA18E5A00D1B9E4 /* CaptainsLog */;
-			targetProxy = C73835E22DA18E5C00D1B9E4 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C73835E92DA18E5C00D1B9E4 /* Debug */ = {
@@ -507,78 +363,6 @@
 			};
 			name = Release;
 		};
-		C73835EF2DA18E5C00D1B9E4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D6C5CCM5T8;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = danigp.es.CaptainsLogTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CaptainsLog.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CaptainsLog";
-			};
-			name = Debug;
-		};
-		C73835F02DA18E5C00D1B9E4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D6C5CCM5T8;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = danigp.es.CaptainsLogTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CaptainsLog.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CaptainsLog";
-			};
-			name = Release;
-		};
-		C73835F22DA18E5C00D1B9E4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D6C5CCM5T8;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = danigp.es.CaptainsLogUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CaptainsLog;
-			};
-			name = Debug;
-		};
-		C73835F32DA18E5C00D1B9E4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D6C5CCM5T8;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = danigp.es.CaptainsLogUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CaptainsLog;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -596,24 +380,6 @@
 			buildConfigurations = (
 				C73835EC2DA18E5C00D1B9E4 /* Debug */,
 				C73835ED2DA18E5C00D1B9E4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C73835EE2DA18E5C00D1B9E4 /* Build configuration list for PBXNativeTarget "CaptainsLogTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C73835EF2DA18E5C00D1B9E4 /* Debug */,
-				C73835F02DA18E5C00D1B9E4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C73835F12DA18E5C00D1B9E4 /* Build configuration list for PBXNativeTarget "CaptainsLogUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C73835F22DA18E5C00D1B9E4 /* Debug */,
-				C73835F32DA18E5C00D1B9E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
