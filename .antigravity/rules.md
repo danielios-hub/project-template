@@ -21,6 +21,14 @@
   - Use extensions to group related functionality (e.g., `AppRouter` navigation methods).
   - Keep `ViewModel` logic focused on UI state and orchestration.
 
+## Concurrency (Swift 6.2+)
+- **Default Isolation**: Feature packages (`Journal`, `News`, etc.) use `.defaultIsolation(MainActor.self)`. ViewModels in these packages are implicitly `@MainActor`.
+- **Manual Isolation (Core)**: The `Core` package uses manual isolation tags (`@MainActor`) to maintain compatibility with `swift-dependencies`.
+- **Background Tasks**: 
+  - Use **`@concurrent`** on nonisolated async functions to explicitly run them on the global concurrent pool.
+  - Avoid `Task.detached` unless necessary for lifecycle management.
+- **Sendability**: Ensure all protocols used in `@Dependency` satisfy `Sendable`.
+
 ## Git & Filesystem
 - **SPM Resolving**: 
   - Track `CaptainsLog.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved`.
