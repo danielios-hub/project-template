@@ -3,7 +3,6 @@ import Core
 import Journal
 import Editor
 import News
-import More
 
 struct RootViewFactory: ViewBuilding {
     func buildView(for route: AppRoute, router: AppRouter) -> AnyView {

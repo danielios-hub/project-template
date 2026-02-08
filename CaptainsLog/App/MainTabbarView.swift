@@ -1,6 +1,5 @@
 import SwiftUI
 import Journal
-import More
 import News
 import Core
 
@@ -16,7 +15,6 @@ final class AppContainer {
 enum Tab {
     case journal
     case news
-    case more
     
     var title: String {
         switch self {
@@ -24,8 +22,6 @@ enum Tab {
             return "Journal"
         case .news:
             return "News"
-        case .more:
-            return "More"
         }
     }
     
@@ -35,8 +31,6 @@ enum Tab {
             return "note.text"
         case .news:
             return "newspaper"
-        case .more:
-            return "ellipsis"
         }
     }
 }
@@ -70,15 +64,6 @@ struct MainTabbarView: View {
                         )
                     }
                     .tag(Tab.news)
-
-                MoreCoordinator(router: appContainer.makeRouter())
-                    .tabItem {
-                        Label(
-                            Tab.more.title,
-                            systemImage: Tab.more.systemImage
-                        )
-                    }
-                    .tag(Tab.more)
             }
         }
     }

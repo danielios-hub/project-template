@@ -11,7 +11,6 @@
 		C77FCE072F2444E4004F2519 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = C77FCE062F2444E4004F2519 /* Core */; };
 		C77FCE092F2444E4004F2519 /* Editor in Frameworks */ = {isa = PBXBuildFile; productRef = C77FCE082F2444E4004F2519 /* Editor */; };
 		C77FCE0B2F2444E4004F2519 /* Journal in Frameworks */ = {isa = PBXBuildFile; productRef = C77FCE0A2F2444E4004F2519 /* Journal */; };
-		C77FCE0D2F2444E4004F2519 /* More in Frameworks */ = {isa = PBXBuildFile; productRef = C77FCE0C2F2444E4004F2519 /* More */; };
 		C7917A9F2F1CDCE600FD12F1 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = C7917A9E2F1CDCE600FD12F1 /* Dependencies */; };
 /* End PBXBuildFile section */
 
@@ -64,7 +63,6 @@
 				C77FCE092F2444E4004F2519 /* Editor in Frameworks */,
 				C7917A9F2F1CDCE600FD12F1 /* Dependencies in Frameworks */,
 				C77FCE0B2F2444E4004F2519 /* Journal in Frameworks */,
-				C77FCE0D2F2444E4004F2519 /* More in Frameworks */,
 				C77FCE072F2444E4004F2519 /* Core in Frameworks */,
 				C7378CD52F3770F400B4550A /* News in Frameworks */,
 			);
@@ -140,7 +138,6 @@
 				C77FCE062F2444E4004F2519 /* Core */,
 				C77FCE082F2444E4004F2519 /* Editor */,
 				C77FCE0A2F2444E4004F2519 /* Journal */,
-				C77FCE0C2F2444E4004F2519 /* More */,
 				C7378CD42F3770F400B4550A /* News */,
 			);
 			productName = CaptainsLog;
@@ -646,10 +643,6 @@
 		C77FCE0A2F2444E4004F2519 /* Journal */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Journal;
-		};
-		C77FCE0C2F2444E4004F2519 /* More */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = More;
 		};
 		C7917A9E2F1CDCE600FD12F1 /* Dependencies */ = {
 			isa = XCSwiftPackageProductDependency;
