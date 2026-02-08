@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "Editor",
-    platforms: [.iOS(.v17)],
+    platforms: [.iOS(.v26)],
     products: [
         .library(
             name: "Editor",
