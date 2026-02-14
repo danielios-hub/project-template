@@ -29,6 +29,12 @@
   - Avoid `Task.detached` unless necessary for lifecycle management.
 - **Sendability**: Ensure all protocols used in `@Dependency` satisfy `Sendable`.
 
+## Package Standards
+- **Tools Version**: All new packages must use `swift-tools-version: 6.2`.
+- **Platform Support**: 
+  - The app and its packages must target **iOS 26** exclusively (`.iOS(.v26)`).
+  - Do not support macOS unless explicitly requested.
+
 ## Git & Filesystem
 - **SPM Resolving**: 
   - Track `ProjectTemplate.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved`.
