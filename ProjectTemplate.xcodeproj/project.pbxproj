@@ -13,6 +13,7 @@
 		C77FCE0B2F2444E4004F2519 /* Journal in Frameworks */ = {isa = PBXBuildFile; productRef = C77FCE0A2F2444E4004F2519 /* Journal */; };
 		C7917A9F2F1CDCE600FD12F1 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = C7917A9E2F1CDCE600FD12F1 /* Dependencies */; };
 		C7CA45722F40D1AD00BE3FFD /* StyleGuide in Frameworks */ = {isa = PBXBuildFile; productRef = C7CA45712F40D1AD00BE3FFD /* StyleGuide */; };
+		C7CA6D892F40D9B200BE3FFD /* AppLogger in Frameworks */ = {isa = PBXBuildFile; productRef = C7CA6D882F40D9B200BE3FFD /* AppLogger */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 			files = (
 				C77FCE092F2444E4004F2519 /* Editor in Frameworks */,
 				C7917A9F2F1CDCE600FD12F1 /* Dependencies in Frameworks */,
+				C7CA6D892F40D9B200BE3FFD /* AppLogger in Frameworks */,
 				C77FCE0B2F2444E4004F2519 /* Journal in Frameworks */,
 				C7CA45722F40D1AD00BE3FFD /* StyleGuide in Frameworks */,
 				C77FCE072F2444E4004F2519 /* Core in Frameworks */,
@@ -95,6 +97,7 @@
 				C77FCE0A2F2444E4004F2519 /* Journal */,
 				C7378CD42F3770F400B4550A /* News */,
 				C7CA45712F40D1AD00BE3FFD /* StyleGuide */,
+				C7CA6D882F40D9B200BE3FFD /* AppLogger */,
 			);
 			productName = ProjectTemplate;
 			productReference = C73835CA2DA18E5A00D1B9E4 /* ProjectTemplate.app */;
@@ -131,6 +134,7 @@
 				C77FCE212F2444E4004F2519 /* XCLocalSwiftPackageReference "ProjectTemplate/Packages/Journal" */,
 				C77FCE312F2444E4004F2519 /* XCLocalSwiftPackageReference "ProjectTemplate/Packages/News" */,
 				C7CA45702F40D1AD00BE3FFD /* XCLocalSwiftPackageReference "ProjectTemplate/Packages/StyleGuide" */,
+				C7CA6D872F40D9B200BE3FFD /* XCLocalSwiftPackageReference "ProjectTemplate/Packages/AppLogger" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C73835CB2DA18E5A00D1B9E4 /* Products */;
@@ -413,6 +417,10 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ProjectTemplate/Packages/StyleGuide;
 		};
+		C7CA6D872F40D9B200BE3FFD /* XCLocalSwiftPackageReference "ProjectTemplate/Packages/AppLogger" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ProjectTemplate/Packages/AppLogger;
+		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -455,6 +463,10 @@
 		C7CA45712F40D1AD00BE3FFD /* StyleGuide */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = StyleGuide;
+		};
+		C7CA6D882F40D9B200BE3FFD /* AppLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppLogger;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
