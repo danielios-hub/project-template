@@ -12,6 +12,7 @@
 		C77FCE092F2444E4004F2519 /* Editor in Frameworks */ = {isa = PBXBuildFile; productRef = C77FCE082F2444E4004F2519 /* Editor */; };
 		C77FCE0B2F2444E4004F2519 /* Journal in Frameworks */ = {isa = PBXBuildFile; productRef = C77FCE0A2F2444E4004F2519 /* Journal */; };
 		C7917A9F2F1CDCE600FD12F1 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = C7917A9E2F1CDCE600FD12F1 /* Dependencies */; };
+		C7CA45722F40D1AD00BE3FFD /* StyleGuide in Frameworks */ = {isa = PBXBuildFile; productRef = C7CA45712F40D1AD00BE3FFD /* StyleGuide */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 				C77FCE092F2444E4004F2519 /* Editor in Frameworks */,
 				C7917A9F2F1CDCE600FD12F1 /* Dependencies in Frameworks */,
 				C77FCE0B2F2444E4004F2519 /* Journal in Frameworks */,
+				C7CA45722F40D1AD00BE3FFD /* StyleGuide in Frameworks */,
 				C77FCE072F2444E4004F2519 /* Core in Frameworks */,
 				C7378CD52F3770F400B4550A /* News in Frameworks */,
 			);
@@ -92,6 +94,7 @@
 				C77FCE082F2444E4004F2519 /* Editor */,
 				C77FCE0A2F2444E4004F2519 /* Journal */,
 				C7378CD42F3770F400B4550A /* News */,
+				C7CA45712F40D1AD00BE3FFD /* StyleGuide */,
 			);
 			productName = ProjectTemplate;
 			productReference = C73835CA2DA18E5A00D1B9E4 /* ProjectTemplate.app */;
@@ -127,6 +130,7 @@
 				C77FCE112F2444E4004F2519 /* XCLocalSwiftPackageReference "ProjectTemplate/Packages/Editor" */,
 				C77FCE212F2444E4004F2519 /* XCLocalSwiftPackageReference "ProjectTemplate/Packages/Journal" */,
 				C77FCE312F2444E4004F2519 /* XCLocalSwiftPackageReference "ProjectTemplate/Packages/News" */,
+				C7CA45702F40D1AD00BE3FFD /* XCLocalSwiftPackageReference "ProjectTemplate/Packages/StyleGuide" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C73835CB2DA18E5A00D1B9E4 /* Products */;
@@ -405,6 +409,10 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ProjectTemplate/Packages/News;
 		};
+		C7CA45702F40D1AD00BE3FFD /* XCLocalSwiftPackageReference "ProjectTemplate/Packages/StyleGuide" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ProjectTemplate/Packages/StyleGuide;
+		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -443,6 +451,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C7917A9D2F1CDCE600FD12F1 /* XCRemoteSwiftPackageReference "swift-dependencies" */;
 			productName = Dependencies;
+		};
+		C7CA45712F40D1AD00BE3FFD /* StyleGuide */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = StyleGuide;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

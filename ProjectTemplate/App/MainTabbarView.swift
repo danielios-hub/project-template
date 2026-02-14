@@ -2,6 +2,7 @@ import SwiftUI
 import Journal
 import News
 import Core
+import StyleGuide
 
 @Observable
 final class AppContainer {
@@ -41,6 +42,7 @@ final class MainTabBarViewModel {
 }
 
 struct MainTabbarView: View {
+    @Environment(\.theme) private var theme
     @State var viewModel = MainTabBarViewModel()
     @State var appContainer = AppContainer()
     
@@ -65,6 +67,7 @@ struct MainTabbarView: View {
                     }
                     .tag(Tab.news)
             }
+        .tint(theme.colors.primary)
         }
     }
 }

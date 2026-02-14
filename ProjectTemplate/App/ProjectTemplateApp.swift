@@ -2,6 +2,7 @@ import SwiftUI
 import SwiftData
 import Dependencies
 import Core
+import StyleGuide
 
 @main
 struct ProjectTemplateApp: App {
@@ -13,6 +14,7 @@ struct ProjectTemplateApp: App {
         WindowGroup {
             MainTabbarView()
                 .modelContainer(dataContainer.container)
+                .theme(DefaultTheme())
         }
     }
 }
