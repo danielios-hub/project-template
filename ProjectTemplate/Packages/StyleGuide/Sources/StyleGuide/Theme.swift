@@ -17,9 +17,9 @@ public protocol ColorPalette: Sendable {
 // MARK: - Typography
 
 public protocol Typography: Sendable {
-    var h1: Font { get }
-    var h2: Font { get }
-    var h3: Font { get }
+    var large: Font { get }
+    var medium: Font { get }
+    var small: Font { get }
     var body: Font { get }
     var bodyBold: Font { get }
     var caption: Font { get }

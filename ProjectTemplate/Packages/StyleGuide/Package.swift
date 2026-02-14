@@ -9,10 +9,10 @@ let package = Package(
     products: [
         .library(
             name: "StyleGuide",
-            targets: ["StyleGuide"]),
+            targets: ["StyleGuide"])
     ],
     targets: [
         .target(
-            name: "StyleGuide"),
+            name: "StyleGuide")
     ]
 )

@@ -20,6 +20,9 @@
 - **Clean Code**:
   - Use extensions to group related functionality (e.g., `AppRouter` navigation methods).
   - Keep `ViewModel` logic focused on UI state and orchestration.
+- **Linting**:
+  - Respect `SwiftLint` rules. Run `swiftlint` locally to verify before finishing tasks.
+  - Avoid force casting (`as!`) and implicitly unwrapped optionals.
 
 ## Concurrency (Swift 6.2+)
 - **Default Isolation**: Feature packages (`Journal`, `News`, etc.) use `.defaultIsolation(MainActor.self)`. ViewModels in these packages are implicitly `@MainActor`.

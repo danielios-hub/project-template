@@ -20,9 +20,9 @@ public struct DefaultColorPalette: ColorPalette {
 // MARK: - Default Typography
 
 public struct DefaultTypography: Typography {
-    public var h1: Font = .system(size: 32, weight: .bold, design: .rounded)
-    public var h2: Font = .system(size: 24, weight: .semibold, design: .rounded)
-    public var h3: Font = .system(size: 20, weight: .semibold, design: .rounded)
+    public var large: Font = .system(size: 32, weight: .bold, design: .rounded)
+    public var medium: Font = .system(size: 24, weight: .semibold, design: .rounded)
+    public var small: Font = .system(size: 20, weight: .semibold, design: .rounded)
     public var body: Font = .body
     public var bodyBold: Font = .body.weight(.bold)
     public var caption: Font = .caption
